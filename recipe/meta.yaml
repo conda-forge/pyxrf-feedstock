@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - pyxrf = pyxrf.gui:run
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
@@ -29,7 +29,7 @@ requirements:
     - ipywidgets
     - jupyter
     - lmfit >=0.8.3
-    - matplotlib
+    - matplotlib-base
     - numpy
     - pandas
     - pillow
