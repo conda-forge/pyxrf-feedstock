@@ -1,20 +1,20 @@
 {% set name = "pyxrf" %}
-{% set version = "0.0.24" %}
+{% set version = "0.0.25" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 248dff370ee2ec5ff42246b2097d3bd6c43edc860122cf0bb753420961b46960
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 726cb898eb56e1128c82ff5e832970d9fdac33745e125d3ed0c59529c964f594
 
 build:
   noarch: python
   number: 0
   entry_points:
     - pyxrf = pyxrf.gui:run
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -48,12 +48,12 @@ test:
     - pyxrf.view
 
 about:
-  home: "http://nsls-ii.github.io/PyXRF"
-  license: "BSD-3-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE"
-  summary: "X-ray Fluorescence Fitting GUI"
-  dev_url: "https://github.com/NSLS-II/PyXRF"
+  home: http://nsls-ii.github.io/PyXRF
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: X-ray Fluorescence Fitting GUI
+  dev_url: https://github.com/NSLS-II/PyXRF
 
 extra:
   recipe-maintainers:
