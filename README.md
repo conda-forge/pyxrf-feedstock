@@ -5,7 +5,7 @@ Home: http://nsls-ii.github.io/PyXRF
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: X-ray Fluorescence Fitting GUI
 
