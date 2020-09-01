@@ -1,5 +1,5 @@
 {% set name = "pyxrf" %}
-{% set version = "0.0.31" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4420b8303c79f8823016fcaa676d123652c43d7369258437dd6e6322f806b2aa
+  sha256: a70898faa1dbac3b89c1480ab2128c76d017acd67a8f92333a600907f07df6a7
 
 build:
   noarch: python
@@ -23,29 +23,49 @@ requirements:
     - setuptools
   run:
     - python >=3.6
-    - atom
-    - enaml >=0.10.3
+    - atom =0.4.3
+    - dask
+    - distributed
+    - jsonschema
     - h5py
-    - ipywidgets
-    - jupyter
-    - lmfit >=0.8.3
-    - matplotlib-base
+    - lmfit
+    - matplotlib
+    - numba
     - numpy
     - pandas
     - pillow
-    - pyqt >=5.9.2
-    - scipy
-    - setuptools
-    - six
-    - scikit-beam >=0.0.17
+    - progress
+    - pyqt
+    - pystackreg
+    - pyyaml
+    - qtpy
+    - requests
     - scikit-image
+    - scipy
+    - scikit-beam
+    - scikit-image
+    - tifffile
+    - xraylib
 
 test:
   imports:
     - pyxrf
-    - pyxrf.db_config
+    - pyxrf.api
+    - pyxrf.api_dev
+    - pyxrf.core
+    - pyxrf.core.fitting
+    - pyxrf.core.map_processing
+    - pyxrf.core.quant_analysis
+    - pyxrf.core.utils
+    - pyxrf.core.xrf_utils
+    - pyxrf.core.yaml_param_files
+    - pyxrf.gui_module
+    - pyxrf.gui_support
     - pyxrf.model
-    - pyxrf.view
+    - pyxrf.simulation
+    - pyxrf.xanes_maps
+    - pyxrf.pyxrf_run
+    - pyxrf.db_config
 
 about:
   home: http://nsls-ii.github.io/PyXRF
