@@ -1,5 +1,5 @@
 {% set name = "pyxrf" %}
-{% set version = "0.0.31" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4420b8303c79f8823016fcaa676d123652c43d7369258437dd6e6322f806b2aa
+  sha256: a70898faa1dbac3b89c1480ab2128c76d017acd67a8f92333a600907f07df6a7
 
 build:
   noarch: python
