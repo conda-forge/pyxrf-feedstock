@@ -23,22 +23,24 @@ requirements:
     - setuptools
   run:
     - python >=3.6
-    - atom
-    - enaml >=0.10.3
+    - atom =0.4.3
+    - dask
+    - distributed
+    - jsonschema
     - h5py
-    - ipywidgets
-    - jupyter
-    - lmfit >=0.8.3
-    - matplotlib-base
+    - lmfit
+    - matplotlib
+    - numba
     - numpy
     - pandas
     - pillow
-    - pyqt >=5.9.2
-    - scipy
-    - setuptools
-    - six
-    - scikit-beam >=0.0.17
+    - qtpy
+    - requests
     - scikit-image
+    - scipy
+    - scikit-beam
+    - scikit-image
+    - xraylib
 
 test:
   imports:
