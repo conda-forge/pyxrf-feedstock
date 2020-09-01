@@ -49,9 +49,22 @@ requirements:
 test:
   imports:
     - pyxrf
-    - pyxrf.db_config
+    - pyxrf.api
+    - pyxrf.api_dev
+    - pyxrf.core
+    - pyxrf.core.fitting
+    - pyxrf.core.map_processing
+    - pyxrf.core.quant_analysis
+    - pyxrf.core.utils
+    - pyxrf.core.xrf_utils
+    - pyxrf.core.yaml_param_files
+    - pyxrf.gui_module
+    - pyxrf.gui_support
     - pyxrf.model
-    - pyxrf.view
+    - pyxrf.simulation
+    - pyxrf.xanes_maps
+    - pyxrf.pyxrf_run
+    - pyxrf.db_config
 
 about:
   home: http://nsls-ii.github.io/PyXRF
