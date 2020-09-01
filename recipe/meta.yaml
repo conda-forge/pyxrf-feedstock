@@ -35,6 +35,7 @@ requirements:
     - pandas
     - pillow
     - progress
+    - pyqt
     - pystackreg
     - pyyaml
     - qtpy
