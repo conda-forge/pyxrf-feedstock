@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - pyxrf = pyxrf.pyxrf_run:run
   script: {{ PYTHON }} -m pip install . --no-deps -vv
