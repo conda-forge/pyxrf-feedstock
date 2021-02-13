@@ -1,15 +1,17 @@
 About pyxrf
 ===========
 
-Home: http://nsls-ii.github.io/PyXRF
+Home: https://github.com/NSLS-II/PyXRF
 
 Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxrf-feedstock/blob/master/LICENSE.txt)
 
-Summary: X-ray Fluorescence Fitting GUI
+Summary: Python-based sophisticated fluorescence analysis package for fitting and visualizing X-ray fluorescence data
 
 Development: https://github.com/NSLS-II/PyXRF
+
+Documentation: http://nsls-ii.github.io/PyXRF
 
 Current build status
 ====================
@@ -116,5 +118,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@dmgav](https://github.com/dmgav/)
+* [@mrakitin](https://github.com/mrakitin/)
 * [@tschoonj](https://github.com/tschoonj/)
 

@@ -1,5 +1,6 @@
 {% set name = "pyxrf" %}
 {% set version = "1.0.2" %}
+{% set sha256 = "0e4c000392e70ec04aa38492f8a4868532eae4dfc09e965d1eb5f389f48c94c9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,54 +8,52 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0e4c000392e70ec04aa38492f8a4868532eae4dfc09e965d1eb5f389f48c94c9
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
-    - pyxrf = pyxrf.gui:run
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+    - pyxrf = pyxrf.pyxrf_run:run
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - pip
     - python >=3.6
-    - setuptools
+    - pip
   run:
     - python >=3.6
-    - atom =0.4.3
+    - atom ==0.4.3
     - dask
     - distributed
+    - h5py >=2.9.0
+    - ipywidgets
     - jsonschema
-    - h5py
-    - lmfit
-    - matplotlib
+    - jupyter
+    - lmfit >=0.8.3
+    - matplotlib <=3.2.2
     - numba
     - numpy
     - pandas
     - pillow
     - progress
-    - pyqt
+    - pyqt >=5.9.2
     - pystackreg
     - pyyaml
-    - qtpy
+    - qtpy >=1.9.0
     - requests
+    - scikit-beam >=0.0.24
     - scikit-image
     - scipy
-    - scikit-beam
-    - scikit-image
+    - six
     - tifffile
-    - xraylib
 
 test:
   imports:
     - pyxrf
     - pyxrf.api
     - pyxrf.api_dev
-    - pyxrf.core
     - pyxrf.core.fitting
-    - pyxrf.core.map_processing
     - pyxrf.core.quant_analysis
     - pyxrf.core.utils
     - pyxrf.core.xrf_utils
@@ -62,19 +61,32 @@ test:
     - pyxrf.gui_module
     - pyxrf.gui_support
     - pyxrf.model
-    - pyxrf.simulation
-    - pyxrf.xanes_maps
-    - pyxrf.pyxrf_run
-    - pyxrf.db_config
+    - pyxrf.model.command_tools
+    - pyxrf.model.data_to_analysis_store
+    - pyxrf.model.draw_image
+    - pyxrf.model.draw_image_rgb
+    - pyxrf.model.fileio
+    - pyxrf.model.fit_spectrum
+    - pyxrf.model.lineplot
+    - pyxrf.model.load_data_from_db
+    - pyxrf.model.param_data
+    - pyxrf.model.parameters
+    - pyxrf.model.roi_model
+    - pyxrf.model.scan_metadata
+    - pyxrf.simulation.sim_xrf_scan_data
+    - pyxrf.xanes_maps.xanes_maps_api
 
 about:
-  home: http://nsls-ii.github.io/PyXRF
+  home: https://github.com/NSLS-II/PyXRF
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: X-ray Fluorescence Fitting GUI
+  summary: Python-based sophisticated fluorescence analysis package for fitting and visualizing X-ray fluorescence data
   dev_url: https://github.com/NSLS-II/PyXRF
+  doc_url: http://nsls-ii.github.io/PyXRF
 
 extra:
   recipe-maintainers:
     - tschoonj
+    - dmgav
+    - mrakitin
