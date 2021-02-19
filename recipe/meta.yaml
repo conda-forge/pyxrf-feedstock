@@ -45,8 +45,8 @@ requirements:
     - scikit-beam >=0.0.24
     - scikit-image
     - scipy
-    - six
     - tifffile
+    - xraylib
 
 test:
   imports:
