@@ -1,6 +1,6 @@
 {% set name = "pyxrf" %}
-{% set version = "1.0.2" %}
-{% set sha256 = "0e4c000392e70ec04aa38492f8a4868532eae4dfc09e965d1eb5f389f48c94c9" %}
+{% set version = "1.0.3" %}
+{% set sha256 = "5a9cf5204cec4acce4345ac0a6b859c56b1098e7daf09c4547939144ba113883" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - pyxrf = pyxrf.pyxrf_run:run
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -45,8 +45,8 @@ requirements:
     - scikit-beam >=0.0.24
     - scikit-image
     - scipy
-    - six
     - tifffile
+    - xraylib
 
 test:
   imports:
