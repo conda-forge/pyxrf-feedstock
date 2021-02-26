@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - atom ==0.4.3
+    - atom
     - dask
     - distributed
     - h5py >=2.9.0
