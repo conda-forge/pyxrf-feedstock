@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - pyxrf = pyxrf.pyxrf_run:run
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -31,7 +31,7 @@ requirements:
     - jsonschema
     - jupyter
     - lmfit >=0.8.3
-    - matplotlib <=3.2.2
+    - matplotlib !=3.3.*
     - numba
     - numpy
     - pandas
