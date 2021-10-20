@@ -1,6 +1,6 @@
 {% set name = "pyxrf" %}
-{% set version = "1.0.8" %}
-{% set sha256 = "09ddaa8dda53c71c5f615128be9f5dc60bcec047075145b515def7f13c44a7cb" %}
+{% set version = "1.0.9" %}
+{% set sha256 = "99130194b6da047555c8582248a372dec6b921ef5cb6310e4d0f0eef6911720e" %}
 
 package:
   name: {{ name|lower }}
@@ -24,8 +24,8 @@ requirements:
   run:
     - python >=3.6
     - atom
-    - dask
-    - distributed
+    - dask <=2021.6.2
+    - distributed <=2021.6.2
     - h5py >=2.9.0
     - ipywidgets
     - jsonschema
