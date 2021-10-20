@@ -5,7 +5,7 @@ Home: https://github.com/NSLS-II/PyXRF
 
 Package license: BSD-3-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxrf-feedstock-cf-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxrf-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python-based sophisticated fluorescence analysis package for fitting and visualizing X-ray fluorescence data
 
@@ -19,8 +19,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyxrf-feedstock-cf-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7889&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyxrf-feedstock?branchName=master">
       </a>
     </td>
   </tr>
