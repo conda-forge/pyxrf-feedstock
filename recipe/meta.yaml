@@ -37,7 +37,7 @@ requirements:
     - pandas
     - pillow
     - progress
-    - pyqt >=5.9.2 <5.15
+    - pyqt >=5.9.2,<5.15
     - pystackreg
     - pyyaml
     - qtpy >=1.9.0
