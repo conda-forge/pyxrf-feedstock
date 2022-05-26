@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - pyxrf = pyxrf.pyxrf_run:run
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -37,7 +37,7 @@ requirements:
     - pandas
     - pillow
     - progress
-    - pyqt >=5.9.2
+    - pyqt >=5.9.2 <5.15
     - pystackreg
     - pyyaml
     - qtpy >=1.9.0
