@@ -1,11 +1,11 @@
-About pyxrf
-===========
+About pyxrf-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxrf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/NSLS-II/PyXRF
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxrf-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python-based sophisticated fluorescence analysis package for fitting and visualizing X-ray fluorescence data
 
