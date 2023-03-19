@@ -1,6 +1,6 @@
 {% set name = "pyxrf" %}
-{% set version = "1.0.22" %}
-{% set sha256 = "9832fd89782657bfa2ae4be4e6888ace86667a8950d2d94c480acbde5f19d20f" %}
+{% set version = "1.0.23" %}
+{% set sha256 = "249cc643750e17a0b4f7e61909e67f44535a60d3c24b74857348795ff8ffe744" %}
 
 package:
   name: {{ name|lower }}
@@ -38,7 +38,7 @@ requirements:
     - pandas
     - pillow
     - progress
-    - pyqt >=5.9.2,<5.15
+    - pyqt >=5.9.2
     - pystackreg
     - pyyaml
     - qtpy >=1.9.0

@@ -1,3 +1,9 @@
 *.pyc
 
 build_artifacts
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
