@@ -1,6 +1,6 @@
 {% set name = "pyxrf" %}
-{% set version = "1.0.29" %}
-{% set sha256 = "1f52704642a7111cfd7dc4c7dc659c1b5d725a6f94ac73c0dc3c6a71e0a6ea84" %}
+{% set version = "1.0.30" %}
+{% set sha256 = "b04fd1c89ae63218891484a33cf829bab7ba72eb669825f4b0bdcbd57eb7d459" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - pyxrf = pyxrf.pyxrf_run:run
   script: {{ PYTHON }} -m pip install . --no-deps -vv
